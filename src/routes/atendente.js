@@ -6,6 +6,7 @@ const controller = new Atendente()
 const router = express.Router()
 
 router.get('/api/atendente/:id', authMiddleware([0, 2]), controller.PegarUm)
+router.get('/api/atendentes/:id', authMiddleware([0, 2]), controller.PegarUm)
 router.get('/api/atendente/', authMiddleware([0, 2]), controller.PegarTodos)
 router.post('/api/atendente', authMiddleware([0]), controller.Add)
 router.put('/api/atendente/:id', authMiddleware([0, 2]), controller.Update)
